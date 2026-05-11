@@ -42,13 +42,13 @@ notarize:
 	echo "Stats successfully notarized"
 
 sign:
-	osascript -e 'display notification "Stampling the Stats..." with title "Build the Stats"'
+	osascript -e 'display notification "Stampling the Stats..." with title "Build the vini"'
 	echo "Going to staple an application..."
 
 	xcrun stapler staple $(APP_PATH)
 	spctl -a -t exec -vvv $(APP_PATH)
 
-	osascript -e 'display notification "Stats successfully stapled" with title "Build the Stats"'
+	osascript -e 'display notification "vini successfully stapled" with title "Build the vini"'
 	echo "Stats successfully stapled"
 
 prepare-dmg:
